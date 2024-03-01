@@ -1,0 +1,2 @@
+INSERT INTO USERS (USER_ID, NAME, EMAIL, PASSWORD,ROLE) VALUES (-1, 'admin00', 'admin00@proceso-muruna.cl', '$2a$10$5sZcL9l77RpREwiPFncpbupkbRmqPbWeH.V9erQll7xd0rFkC6OjG', 'ADMIN');
+INSERT INTO USERS (USER_ID, NAME, EMAIL, PASSWORD,ROLE) VALUES (-2, 'user00', 'user00@proceso-muruna.cl', '$2a$10$5sZcL9l77RpREwiPFncpbupkbRmqPbWeH.V9erQll7xd0rFkC6OjG', 'USER');

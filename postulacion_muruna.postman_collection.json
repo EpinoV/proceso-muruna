@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "4ab89659-840a-410e-a51b-1755a3b1cd5f",
+		"name": "postulacion-muruna",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5448507"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"user00@proceso-muruna.cl\",\n    \"password\": \"user1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/proceso-muruna/api/v1/auth/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"proceso-muruna",
+						"api",
+						"v1",
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Eduardo\",\n    \"email\": \"eduardo@proceso-muruna.cl\",\n    \"password\": \"user1234\",\n    \"phones\": [\n        {\n            \"phoneNumber\": \"1234567\",\n            \"cityCode\": \"1\",\n            \"countryCode\": \"57\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/proceso-muruna/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"proceso-muruna",
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZHVhcmRvQHByb2Nlc28tYmNpLmNsIiwiaWF0IjoxNjkwNzgyMjcyLCJleHAiOjE2OTA4Njg2NzJ9.Rx2wGIWZcTiI6G9U3g8YpA_FlyWFCkd_u-I6p3McdEE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/proceso-muruna/api/v1/private/allUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"proceso-muruna",
+						"api",
+						"v1",
+						"private",
+						"allUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userByEmail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZHVhcmRvQHByb2Nlc28tYmNpLmNsIiwiaWF0IjoxNjkwNzgyMjcyLCJleHAiOjE2OTA4Njg2NzJ9.Rx2wGIWZcTiI6G9U3g8YpA_FlyWFCkd_u-I6p3McdEE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/proceso-muruna/api/v1/private/userByEmail?email=eduardo@proceso-muruna.cl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"proceso-muruna",
+						"api",
+						"v1",
+						"private",
+						"userByEmail"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "eduardo@proceso-muruna.cl"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZHVhcmRvQHByb2Nlc28tYmNpLmNsIiwiaWF0IjoxNjkwNzgyMjcyLCJleHAiOjE2OTA4Njg2NzJ9.Rx2wGIWZcTiI6G9U3g8YpA_FlyWFCkd_u-I6p3McdEE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Andrea\",\n    \"email\": \"andrea@proceso-muruna.cl\",\n    \"password\": \"user1200\",\n    \"phones\": [\n        {\n            \"phoneNumber\": \"1234567\",\n            \"cityCode\": \"1\",\n            \"countryCode\": \"57\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/proceso-muruna/api/v1/private/newUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"proceso-muruna",
+						"api",
+						"v1",
+						"private",
+						"newUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
