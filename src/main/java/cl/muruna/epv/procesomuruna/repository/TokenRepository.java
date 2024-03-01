@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-//@Repository
+@Repository
 public interface TokenRepository extends JpaRepository<Token, Integer> {
     @Query(value = """
       select t from Token t inner join User u\s
