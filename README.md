@@ -4,6 +4,9 @@
 
 #### Este proyecto cuenta con un archivo en la raiz (postulacion_muruna.postman_collection.json), el cual debe importarse en Postman como collection y podrán probarse todos los endpoints
 
+## Swagger
+### http://localhost:8086/proceso-muruna/doc/swagger-ui.html
+
 ### IMPORTANTE
 #### Para ejecutar cualquiera de los servicios, previamente se debe ejecutar el servicio de autenticacion (Authenticate), este proveerá un token AWT para acceder a los demas servicios
 
